@@ -33,9 +33,10 @@ const Dashboard = () => {
 
             {
                 AllmoviesList.movies && AllmoviesList.movies.Search.map(movie => (
-                <div>
-                <p key={movie.imdbID}>{movie.Title}</p>
+                <div key={movie.imdbID}>
+                <p >{movie.Title}</p>
                 <img src={movie.Poster}  alt="img"/>
+                <p>{movie.Year}</p>
                 </div>
                ))
             }
