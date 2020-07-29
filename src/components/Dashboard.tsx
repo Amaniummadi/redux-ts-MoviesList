@@ -32,7 +32,12 @@ const Dashboard = () => {
             </form>
 
             {
-                AllmoviesList.movies && AllmoviesList.movies.Search.map(movie => <p key={movie.imdbID}>{movie.Title}</p>)
+                AllmoviesList.movies && AllmoviesList.movies.Search.map(movie => (
+                <div>
+                <p key={movie.imdbID}>{movie.Title}</p>
+                <img src={movie.Poster}  alt="img"/>
+                </div>
+               ))
             }
         </div>
     )
